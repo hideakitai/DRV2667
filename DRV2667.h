@@ -19,9 +19,7 @@ namespace EmbeddedDevices
             enum class Input { DIGITAL_IN, ANALOG_IN };
             enum class Timeout { MS_5, MS_10, MS_15, MS_20 };
 
-            virtual ~DRV2667() {}
-
-            void attatch(TwoWire& w) { wire = &w; }
+            void attatch(TwoWire& w = Wire) { wire = &w; }
 
             void play()
             {
